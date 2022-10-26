@@ -478,7 +478,7 @@ body {
 
 /*--------------------------------------- INICIO ESTILOS CONTACTO --------------------------------------- */
 #contacto {
-  background-image: url(/img/Secciones/contacto.webp);
+  background-image: url(img/Secciones/contacto.jpg);
   background-size: cover;
   height: 75vh;
 }
