@@ -1,0 +1,1138 @@
+/*--Google Fonts--*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*--Reseteo de margin y padding--*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--ESTILO PRINCIPAL--*/
+html {
+    --spacing: 10vh;
+    --spacing-S: 5vh;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+		background: #e9e9e9;
+}
+
+/*--------------------------------------- ESTILOS DE HEADER --------------------------------------- */
+.main-header {
+    background-color: #262626;
+    background-size: cover;
+    color: white;
+    position: sticky;
+    width: 100%;
+    height: 15vh;
+    top: 0;
+    z-index: 1;
+}
+
+.headerWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 0 20px;
+}
+
+.nav-bar{
+  display:flex;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  width: 100%;
+  height: 10vh;
+}
+
+.brand img{
+  height: 10vh;
+  padding: 0 10px;
+}
+
+.nav ul li{
+  display: inline-block;
+  line-height: 100%;
+  padding: 0 5px;
+}
+
+.nav a{
+  color: white;
+  margin: auto;
+  font-size: 1rem;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.nav a:hover{
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+}
+
+.nav a.active{
+  background-color: #0084ff
+}
+
+.nav a.shop{
+  background-color: #c5e550;
+  color: #262626;
+}
+/*--------------------------------------- FIN ESTILOS DE HEADER --------------------------------------- */
+
+/*--------------------------------------- INICIO ESTILOS DE SECCIÓN --------------------------------------- */
+.section-row{
+	position: relative;
+	width: 100%;
+	height: 85vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	scroll-margin-top: 15vh;
+}
+
+.section-column{
+	position: relative;
+	width: 100%;
+	height: 85vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 20px;
+	scroll-margin-top: 15vh;
+	row-gap: 2vh;
+}
+
+.section-header{
+	max-width: 1300px;
+	text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  row-gap: 2vh;
+  height: 15vh;
+  margin-top: 2vh;
+}
+
+.section-header-h1{
+	max-width: 1300px;
+	text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 15vh;
+  margin-top: 2vh;
+  font-size: 1.3rem;
+}
+
+.section-header h2{
+  font-size: 1.8rem;
+}
+
+.section-header h3{
+  font-size: 1.4rem;
+}
+
+.contenidoPpal{
+	display: flex;
+	justify-content: space-between;
+  flex-wrap: wrap;
+	column-gap: 10px;
+  height: 64vh;
+  width: 100%;
+  margin-bottom: 2vh;
+}
+
+/*--------------------------------------- INICIO ESTILOS DE CAROUSEL --------------------------------------- */
+
+#inicio {
+  background: #0084ff;
+}
+
+/*--Truco para que funcione el aspect ratio--*/
+.carousel-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 85vh;
+  margin: 0 20px;
+}
+
+.carousel{
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-size: 1.3rem;
+  overflow: hidden;
+}
+
+.carousel-screen{
+  position: absolute;
+  height: 85vh;
+  width: 100%;
+}
+
+.carousel img{
+  width: 100%;
+  fill: cover;
+}
+
+/* -- ESTILOS DE ELEMENTOS ESTÁTICOS -- */
+.left-arrow{
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left:0;
+  height: 100%;
+  width: 50px;
+  cursor: pointer;
+}
+
+.left-arrow:hover{
+  background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.3));
+}
+
+.right-arrow{
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right:0;
+  height: 100%;
+  width: 50px;
+  cursor: pointer;
+}
+
+.right-arrow:hover{
+  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.3));
+}
+
+.chevron{
+  width: 25px;
+  height: 25px;
+  border: solid rgba(255, 255, 255, 0.5);
+  border-width: 6px 6px 0 0;
+}
+
+.chevron.right{
+  transform: rotate(45deg);
+}
+
+.chevron.left{
+  transform: rotate(-135deg);
+}
+
+.left-arrow:hover .chevron,
+.right-arrow:hover .chevron{
+  border-color: #e6e6e6;
+}
+
+.circle-container{
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+}
+
+.circle{
+  border: 1px solid white;
+  width: 20px;
+  height: 8px;
+  border-radius: 4px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.circle-fill{
+  background-color: white;
+}
+
+/* -- ESTILOS DE TEXTO -- */
+.text-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  bottom: 45px;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-shadow: 1px 1px black;
+  text-align: center;
+}
+
+.text-container p:nth-child(1){
+  margin: 10px 100px;
+  font-size: 1.3rem;
+}
+
+.text-container p:nth-child(2){
+  margin: 10px 100px 20px 100px;
+}
+/*--------------------------------------- FIN ESTILOS DE CAROUSEL --------------------------------------- */
+
+/*--------------------------------------- INICIO ESTILOS CONOCENOS --------------------------------------- */
+#conocenos{
+  background: transparent;
+}
+
+.contIzq{
+  justify-self: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 60vw;
+  padding-right: 10vh;
+}
+
+.contDer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+}
+
+.contDer img{
+  object-fit: contain;
+  width: 100%;
+  height: 64vh;
+}
+
+.contLogoTexto{
+  display: flex;
+  max-height: 10vh;
+  column-gap: 10px;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.contLogoTexto p{
+  text-align: justify;
+}
+
+.contLogoTexto img{
+  object-fit: contain;
+  height: 40px;
+}
+
+.contTexto{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*--------------------------------------- FIN ESTILOS CONOCENOS --------------------------------------- */
+
+/*--------------------------------------- INICIO ESTILOS SEDES --------------------------------------- */
+#sedes {
+  background-color: #0084ff;
+  background-size: cover;
+}
+
+.map {
+  width: 420px;
+  height: 100%;
+}
+
+.sedeSeleccion {
+  display:flex;
+  flex-direction: column;
+  row-gap: 20px;
+  height: 100%;
+  width: calc(100% - 440px);
+  padding-top: 20px;
+}
+
+.contSedeNombre{
+  display: flex;
+  max-height: 10vh;
+  column-gap: 10px;
+  width: 30vw;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.contSedeNombre img{
+  object-fit: contain;
+  height: 60px;
+}
+
+.contSede{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+}
+
+
+/*--------------------------------------- FIN ESTILOS SEDES --------------------------------------- */
+
+/*--------------------------------------- INICIO ESTILOS CLASES --------------------------------------- */
+#clases {
+  background-color: transparent;
+  background-size: cover;
+}
+
+.contIzqClases{
+  justify-self: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 45vw;
+  margin-right: 10vh;
+}
+
+.contIzqClases h3{
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.contIzqClases p{
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.botonClases {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.3rem;
+}
+
+#botonClases {
+  color: #262626;
+  font-weight: 600;
+  font-size: 1.5rem;
+  background-color: #c5e550;
+  border-radius: 4px;
+  border: 0;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+#botonClases:hover {
+  color: white;
+}
+
+.contDerClases{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+}
+
+.contDerClases img{
+  object-fit: contain;
+  width: 100%;
+  height: 64vh;
+}
+
+/*--------------------------------------- FIN ESTILOS CLASES--------------------------------------- */
+
+/*--------------------------------------- INICIO ESTILOS WPT --------------------------------------- */
+#wpt {
+  background-color: #c9e465;
+  background-size: cover;
+}
+
+.wptPpal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 20px;
+  height: 64vh;
+}
+
+.contWpt{
+  width:47vw;
+}
+
+.iframe {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.iframe iframe {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  }
+
+/*--------------------------------------- FIN ESTILOS WPT--------------------------------------- */
+
+/*--------------------------------------- INICIO ESTILOS CONTACTO --------------------------------------- */
+#contacto {
+  background-image: url(/img/Secciones/contacto.webp);
+  background-size: cover;
+  height: 75vh;
+}
+
+#contacto .contenidoPpal {
+  height: 54vh;
+}
+
+.contForm{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  position: relative;
+  width: 35vw;
+  row-gap: 0.5rem;
+  height: 100%;
+}
+
+.contLblInpt{
+  display: flex;
+  font-size: 1.1rem;
+  justify-content: space-between;
+}
+
+.contLblInpt textarea{
+  font-size: 1.1rem;
+  font-family: 'Montserrat';
+  width: 100%;
+}
+
+.lbl{
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+.inpt {
+  margin-bottom: 3px;
+  font-family: 'Montserrat';
+  width: 60%
+}
+
+.contCheck{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 0.9rem;
+  column-gap: 10px;
+}
+
+#btn{
+  background-color: #0084ff;
+  color: white;
+  width: 100%;
+  height: 2rem;
+  align-self: center;
+  height: fit-content;
+  padding: 5px;
+  font-family: 'Montserrat';
+  border: 0;
+  border-radius: 4px
+
+}
+
+#btn:hover {
+  background-color: rgb(119, 187, 255);
+  color: white;
+}
+/*--------------------------------------- FIN ESTILOS CONTACTO --------------------------------------- */
+
+/*--------------------------------------- INICIO ESTILOS SHOP-MAIN --------------------------------------- */
+.mainShop {
+  background: #0084ff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+/*--------------------------------------- INICIO ESTILOS SHOP-ASIDE --------------------------------------- */
+.aside {
+  width: 15vw;
+  height: 75vh;
+  background-color: #0084ff;
+  top: 15vh;
+  justify-self: flex-start;
+  align-self: flex-start;
+  position: sticky;
+  padding: 20px;
+}
+
+.menuMarca li {
+  border-bottom: 1px solid black;
+  font-size: 1.3rem;
+  padding: 4px;
+  list-style-type: none;
+}
+
+.cajaMarca {
+  background-color: #0084ff;
+  margin-bottom: 10px;
+}
+
+.cajaMarca:hover {
+  background-color: rgb(97, 172, 247);
+}
+
+.menuMarca a {
+  text-decoration: none;
+  color: white;
+}
+
+.subMenu {
+  display: none;
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.subMenu li {
+  background-color: #262626;
+  padding-left: 1.3rem;
+  border-bottom: white solid 1px;
+  margin-bottom: 5px;
+}
+
+.bg1:hover {
+  background-color: gray;
+}
+
+.menuMarca:hover .subMenu {
+  display: block;
+}
+
+/*--------------------------------------- FIN ESTILOS SHOP-ASIDE --------------------------------------- */
+
+/*--------------------------------------- INICIO ESTILOS SHOPLIST --------------------------------------- */
+.shopList {
+  background: #e9e9e9;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 85vw;
+  scroll-margin-top: 15vh;
+  justify-self: flex-end;
+}
+
+.shopList h2 {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  background: #0084ff;
+  scroll-margin-top: 17vh;
+  border-radius: 4px;
+  margin-bottom: 10px
+}
+
+.contenedor-marca{
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 20px;
+	scroll-margin-top: 15vh;
+	row-gap: 10px;
+}
+
+.fotoLogo {
+  height: 7rem;
+}
+
+.contItem {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+  row-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.itemShop {
+  background-color: white;
+  width: 18rem;
+  border: white solid 1px;
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  transform: scale(1);
+  transition: transform 1s;
+  /* TRANSICIÒN */
+}
+
+.itemShop:hover {
+  transform: scale(1.1);
+  transition: transform 1s;
+  box-shadow: 2px 2px 4px 1.5px rgb(204, 204, 204);
+}
+
+.comprarItem {
+  display: none;
+}
+
+.itemShop:hover .comprarItem {
+  display: block;
+}
+.fotoShop img {
+  width: 14rem;
+  height: 14rem;
+}
+
+.itemNombre p {
+    font-size: 1rem;
+    text-align: center;
+}
+.precioShop {
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.comprarItem button {
+  background-color: #c5e550;
+  border: 0px #c5e550;
+  width: 5.5rem;
+  height: 1.4rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  font-weight: bolder;
+  margin: 0.5rem 0.5rem;
+  font-family: 'Montserrat'
+}
+
+.comprarItem button:hover {
+  color: white;
+  background-color: black;
+  border: black;
+}
+/*--------------------------------------- FIN ESTILOS SHOPLIST --------------------------------------- */
+
+/*--------------------------------------- FIN ESTILOS SHOP-MAIN --------------------------------------- */
+
+/*--------------------------------------- INICIO ESTILOS FOOTER --------------------------------------- */
+#main-footer {
+  display: flex;
+  background-color: #262626;
+  background-size: cover;
+  height:10vh;
+  color: white;
+}
+
+.footerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 20px;
+}
+
+.contPpoint {
+  display: flex;
+  align-items: center;
+}
+
+.contPpoint img {
+  object-fit: contain;
+  width: auto;
+  height: 7vh;
+}
+
+.contPfooter {
+  width: auto;
+  border: white 1px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  font-size: 0.8rem; 
+}
+
+.contLogofooter {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.contLogofooter img{
+  width: 5vh;
+}
+/*--------------------------------------- FIN ESTILOS FOOTER --------------------------------------- */
+
+/*--------------------------------------- INICIO ANIMACIONES --------------------------------------- */
+@keyframes toRight{
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes toLeft{
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes comeRight{
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes comeLeft{
+    0% {
+        left: -100;
+    }
+    100% {
+        left: 0%;
+    }
+}
+/*--------------------------------------- FIN ANIMACIONES --------------------------------------- */
+
+/*--------------------------------------- MEDIA QUERIES --------------------------------------- */
+
+/*
+Hasta 575px son teléfonos móviles en modo vertical.
+De 576px a 767px son teléfonos móviles en modo horizontal.
+De 768px a 991px son tabletas.
+De 992px a 1199px son pantallas de escritorio normales.
+1200px o más son pantallas grandes como televisores.
+*/
+
+@media screen and (max-width: 1199px) {
+  .menuMarca li {
+    font-size: 1rem;
+  }
+  .shopList h2 {
+    font-size: 1.8rem;
+  }
+  .fotoLogo {
+    height: 6rem;
+  }
+  h1{
+    font-size: 1.6rem;
+  }
+  .contTexto p{
+    font-size: 1rem;
+  }
+
+  .section-header h2{
+    font-size: 1.4rem;
+  }
+
+  .section-header h3{
+    font-size: 1.2rem;
+  }
+
+  .contIzqClases{
+    width: 40vw;
+  }
+
+  .contIzqClases p{
+    font-size: 1rem;
+  }
+
+  #botonClases{
+    font-size: 1rem;
+  }
+
+  .contLblInpt {
+    font-size: 1rem;
+  }
+
+  .contLblInpt textarea {
+    font-size: 1rem;
+  }
+
+  .contSedeNombre{
+    width: 35vw
+  }
+
+}
+
+@media screen and (max-width: 991px) {
+  .aside {
+    width: 18vw;
+    position: relative;
+    top: 0;
+  }
+
+  .menuMarca li {
+    padding: 2px;
+    top: 0;
+  }
+
+  .itemShop:hover {
+    transform: scale(1);
+  }
+
+  .comprarItem {
+    display: block;
+  }
+
+  .cajaMarca {
+    font-weight: bold;
+  }
+
+  .subMenu {
+    display: block;
+  }
+
+  .shopList h2 {
+    font-size: 1.5rem;
+  }
+
+  .fotoLogo {
+    height: 5rem;
+  }
+
+  h1{
+    font-size: 1.3rem;
+  }
+  .contTexto p{
+    font-size: 1rem;
+  }
+
+  .section-column{
+    height: 100%
+  }
+
+  .section-header{
+    height: 100%;
+  }
+  .section-header h2{
+    font-size: 1.2rem;
+  }
+
+  .section-header h3{
+    font-size: 1rem;
+  }
+
+  .contenidoPpal{
+    flex-direction: column;
+    height: auto;
+    flex-wrap: nowrap;
+    row-gap:10px;
+  }
+
+  .contIzq{
+    width: 100%;
+    padding: 0;
+  }
+
+  .contDer img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .map{
+    width: 100%;
+    height: 300px
+  }
+
+  .sedeSeleccion{
+    width: 100%;
+  }
+
+  .contSedeNombre{
+    width: 50%;
+  }
+
+  .contIzqClases{
+    width: 100%;
+    font-size: 1rem;
+    row-gap: 10px;
+  }
+
+  .contIzqClases h3{
+    font-size: 1rem;
+  }
+  
+  .contDerClases img{
+    width: 100%;
+    height: 100%;
+  }
+
+  #botonClases{
+    margin-top: 0;
+    font-size: 1rem;
+  }
+
+  .botonClases {
+    margin-top: 10px;
+  }
+
+  .wptPpal{
+    flex-direction: column;
+    row-gap: 10px;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+
+  .contWpt{
+    width: 100%;
+  }
+
+  #contacto{
+    height: 100%;
+  }
+  
+  #contacto .contenidoPpal{
+    height: 100%;
+  }
+
+  .contForm{
+    width:40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-header{
+    height: 7rem;
+  }
+  
+  .headerWrapper{
+    flex-direction: column;
+    height: 100%;
+    margin: 0 20px;
+    padding: 10px 0;
+  }
+
+  .nav-bar{
+    height: 2rem;
+  }
+
+  .brand img{
+    object-fit: contain;
+    height: 3rem;
+    width: auto;
+  }
+
+  .section-row{
+    scroll-margin-top: 7rem;
+  }
+
+  .section-column{
+    scroll-margin-top: 7rem;
+  }
+
+  .aside {
+    width: 24%;
+  }
+
+  .shopList{
+    scroll-margin-top: 7rem;
+    width: 76%;
+  }
+
+  .shopList h2{
+    scroll-margin-top: 7rem;
+  }
+
+  .contenedor-marca{
+    scroll-margin-top: 7rem;
+  }
+
+  .contForm{
+    width:70%;
+    align-self: center;
+  }
+
+  #main-footer{
+    height: 100%;
+  }
+
+  .footerWrapper{
+    flex-direction: column;
+    padding: 10px 0;
+    row-gap: 10px;
+  }
+
+  .contPpoint img{
+    height: 40px;
+  }
+
+  .contPfooter  {
+    height: auto;
+    padding: 0;
+  }
+
+  .contLogofooter{
+    height:auto;
+  }
+
+  .contLogofooter img {
+    width: 3rem;
+  }
+
+  .contSedeNombre img{
+    width: 40px;
+  }
+
+  .contSede{
+    font-size: 0.9rem;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  .nav a{
+    font-size: 0.7rem;
+  }
+  
+  .aside {
+    width: 30vw;
+  }
+
+  .shopList{
+    width: 70vw
+  }
+
+  .fotoLogo {
+    height: 3rem;
+  }
+
+  .shopList h2 {
+    font-size: 1.5rem;
+  }
+  .menuMarca li {
+    font-size: 1.1rem;
+  }
+
+  h1{
+    font-size: 1rem;
+  }
+
+  .contTexto p{
+    font-size: 0.8rem;
+  }
+  .contSedeNombre{
+    width: 60vw
+  }
+}
+/*--------------------------------------- FIN MEDIAQ QUERIES --------------------------------------- */
