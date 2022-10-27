@@ -304,9 +304,10 @@ body {
   justify-self: left;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   width: 60vw;
   padding-right: 10vh;
+  row-gap: 1.5rem;
 }
 
 .contDer {
@@ -906,11 +907,6 @@ De 992px a 1199px son pantallas de escritorio normales.
   .brand img {
     height: 7vh;
   }
-
-  .contIzq{
-    row-gap: 0.5rem;
-  }
-
 }
 
 @media screen and (max-width: 991px) {
@@ -1164,6 +1160,10 @@ De 992px a 1199px son pantallas de escritorio normales.
   .right-arrow {
     width: 100px;
   }
+
+  .contIzq{
+    row-gap: 1rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -1223,6 +1223,10 @@ De 992px a 1199px son pantallas de escritorio normales.
 
   .circle-container {
     align-items: center;
+  }
+
+  .contIzq{
+    row-gap: 0.5rem;
   }
 }
 
