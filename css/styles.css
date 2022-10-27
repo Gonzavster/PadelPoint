@@ -10,8 +10,8 @@
 
 /*--ESTILO PRINCIPAL--*/
 html {
-  --spacing: 10vh;
-  --spacing-S: 5vh;
+  --margenes20: 20px;
+  --margenes50: 50px;
 }
 
 body {
@@ -37,7 +37,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  margin: 0 20px;
+  margin: 0 var(--margenes20);
 }
 
 .nav-bar {
@@ -47,6 +47,7 @@ body {
   list-style: none;
   width: 100%;
   height: 10vh;
+  justify-content: center;
 }
 
 .brand img {
@@ -106,7 +107,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 0 20px;
+  padding: 0 var(--margenes20);
   scroll-margin-top: 15vh;
   row-gap: 2vh;
 }
@@ -252,7 +253,7 @@ body {
 
 .circle {
   border: 1px solid white;
-  width: 20px;
+  width: var(--margenes20);
   height: 8px;
   border-radius: 4px;
   margin: 0 5px;
@@ -468,7 +469,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 0 20px;
+  margin: 0 var(--margenes20);
   height: 64vh;
 }
 
@@ -581,7 +582,7 @@ body {
   justify-self: flex-start;
   align-self: flex-start;
   position: sticky;
-  padding: 20px;
+  padding: var(--margenes20);
 }
 
 .menuMarca li {
@@ -657,7 +658,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 20px;
+  padding: var(--margenes20);
   scroll-margin-top: 15vh;
   row-gap: 10px;
 }
@@ -760,7 +761,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 0 20px;
+  margin: 0 var(--margenes20);
 }
 
 .contPpoint {
@@ -1068,7 +1069,7 @@ De 992px a 1199px son pantallas de escritorio normales.
   .headerWrapper {
     flex-direction: column;
     height: 100%;
-    margin: 0 20px;
+    margin: 0 var(--margenes20);
     padding: 10px 0;
   }
 
