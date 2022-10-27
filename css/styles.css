@@ -2,46 +2,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /*--Reseteo de margin y padding--*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*--ESTILO PRINCIPAL--*/
 html {
-    --spacing: 10vh;
-    --spacing-S: 5vh;
+  --spacing: 10vh;
+  --spacing-S: 5vh;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-		background: #e9e9e9;
+  font-family: 'Montserrat', sans-serif;
+  background: #e9e9e9;
 }
 
 /*--------------------------------------- ESTILOS DE HEADER --------------------------------------- */
 .main-header {
-    background-color: #262626;
-    background-size: cover;
-    color: white;
-    position: sticky;
-    width: 100%;
-    height: 15vh;
-    top: 0;
-    z-index: 1;
+  background-color: #262626;
+  background-size: cover;
+  color: white;
+  position: sticky;
+  width: 100%;
+  height: 15vh;
+  top: 0;
+  z-index: 1;
 }
 
-.headerWrapper{
+.headerWrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   margin: 0 20px;
 }
 
-.nav-bar{
-  display:flex;
+.nav-bar {
+  display: flex;
   align-items: center;
   text-decoration: none;
   list-style: none;
@@ -49,18 +49,18 @@ body {
   height: 10vh;
 }
 
-.brand img{
+.brand img {
   height: 10vh;
   padding: 0 10px;
 }
 
-.nav ul li{
+.nav ul li {
   display: inline-block;
   line-height: 100%;
   padding: 0 5px;
 }
 
-.nav a{
+.nav a {
   color: white;
   margin: auto;
   font-size: 1rem;
@@ -69,49 +69,51 @@ body {
   border-radius: 4px;
 }
 
-.nav a:hover{
+.nav a:hover {
   background-color: white;
   color: black;
   transition: 0.3s;
 }
 
-.nav a.active{
+.nav a.active {
   background-color: #0084ff
 }
 
-.nav a.shop{
+.nav a.shop {
   background-color: #c5e550;
   color: #262626;
 }
+
 /*--------------------------------------- FIN ESTILOS DE HEADER --------------------------------------- */
 
 /*--------------------------------------- INICIO ESTILOS DE SECCIÓN --------------------------------------- */
-.section-row{
-	position: relative;
-	width: 100%;
-	height: 85vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	scroll-margin-top: 15vh;
+.section-row {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-margin-top: 15vh;
 }
 
-.section-column{
-	position: relative;
-	width: 100%;
-	height: 85vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	padding: 0 20px;
-	scroll-margin-top: 15vh;
-	row-gap: 2vh;
+.section-column {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 0 20px;
+  scroll-margin-top: 15vh;
+  row-gap: 2vh;
 }
 
-.section-header{
-	max-width: 1300px;
-	text-align: center;
+.section-header {
+  max-width: 1300px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -120,33 +122,35 @@ body {
   margin-top: 2vh;
 }
 
-.section-header-h1{
-	max-width: 1300px;
-	text-align: center;
+.section-header-h1 {
+  max-width: 1300px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 15vh;
   margin-top: 2vh;
   font-size: 1.3rem;
+  border: red solid 1px
 }
 
-.section-header h2{
+.section-header h2 {
   font-size: 1.8rem;
 }
 
-.section-header h3{
+.section-header h3 {
   font-size: 1.4rem;
 }
 
-.contenidoPpal{
-	display: flex;
-	justify-content: space-between;
-  flex-wrap: wrap;
-	column-gap: 10px;
+.contenidoPpal {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  column-gap: 10px;
   height: 64vh;
   width: 100%;
   margin-bottom: 2vh;
+  border: red solid 1px
 }
 
 /*--------------------------------------- INICIO ESTILOS DE CAROUSEL --------------------------------------- */
@@ -156,7 +160,7 @@ body {
 }
 
 /*--Truco para que funcione el aspect ratio--*/
-.carousel-container{
+.carousel-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -166,7 +170,7 @@ body {
   border: yellow solid 1px;
 }
 
-.carousel{
+.carousel {
   position: relative;
   display: flex;
   height: 100%;
@@ -175,72 +179,72 @@ body {
   overflow: hidden;
 }
 
-.carousel-screen{
+.carousel-screen {
   position: absolute;
   height: 85vh;
   width: 100%;
 }
 
-.carousel img{
+.carousel img {
   width: 100%;
   fill: cover;
 }
 
 /* -- ESTILOS DE ELEMENTOS ESTÁTICOS -- */
-.left-arrow{
-  position:absolute;
+.left-arrow {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   top: 0;
-  left:0;
+  left: 0;
   height: 100%;
   width: 50px;
   cursor: pointer;
 }
 
-.left-arrow:hover{
-  background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.3));
+.left-arrow:hover {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
 }
 
-.right-arrow{
-  position:absolute;
+.right-arrow {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   top: 0;
-  right:0;
+  right: 0;
   height: 100%;
   width: 50px;
   cursor: pointer;
 }
 
-.right-arrow:hover{
-  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.3));
+.right-arrow:hover {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
 }
 
-.chevron{
+.chevron {
   width: 25px;
   height: 25px;
   border: solid rgba(255, 255, 255, 0.5);
   border-width: 6px 6px 0 0;
 }
 
-.chevron.right{
+.chevron.right {
   transform: rotate(45deg);
 }
 
-.chevron.left{
+.chevron.left {
   transform: rotate(-135deg);
 }
 
 .left-arrow:hover .chevron,
-.right-arrow:hover .chevron{
+.right-arrow:hover .chevron {
   border-color: #e6e6e6;
 }
 
-.circle-container{
-  position:absolute;
+.circle-container {
+  position: absolute;
   display: flex;
   justify-content: center;
   bottom: 0;
@@ -249,7 +253,7 @@ body {
   height: 45px;
 }
 
-.circle{
+.circle {
   border: 1px solid white;
   width: 20px;
   height: 8px;
@@ -258,7 +262,7 @@ body {
   cursor: pointer;
 }
 
-.circle-fill{
+.circle-fill {
   background-color: white;
 }
 
@@ -278,22 +282,23 @@ body {
   border: red solid 1px;
 }
 
-.text-container p:nth-child(1){
+.text-container p:nth-child(1) {
   margin: 10px 100px;
   font-size: 1.3rem;
 }
 
-.text-container p:nth-child(2){
+.text-container p:nth-child(2) {
   margin: 10px 100px 20px 100px;
 }
+
 /*--------------------------------------- FIN ESTILOS DE CAROUSEL --------------------------------------- */
 
 /*--------------------------------------- INICIO ESTILOS CONOCENOS --------------------------------------- */
-#conocenos{
+#conocenos {
   background: transparent;
 }
 
-.contIzq{
+.contIzq {
   justify-self: left;
   display: flex;
   flex-direction: column;
@@ -302,20 +307,20 @@ body {
   padding-right: 10vh;
 }
 
-.contDer{
+.contDer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: fit-content;
 }
 
-.contDer img{
+.contDer img {
   object-fit: contain;
   width: 100%;
   height: 64vh;
 }
 
-.contLogoTexto{
+.contLogoTexto {
   display: flex;
   max-height: 10vh;
   column-gap: 10px;
@@ -323,16 +328,16 @@ body {
   font-size: 1.3rem;
 }
 
-.contLogoTexto p{
+.contLogoTexto p {
   text-align: justify;
 }
 
-.contLogoTexto img{
+.contLogoTexto img {
   object-fit: contain;
   height: 40px;
 }
 
-.contTexto{
+.contTexto {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -346,21 +351,26 @@ body {
   background-size: cover;
 }
 
+#sedes .contenidoPpal{
+  justify-content: center;
+}
+
 .map {
   width: 420px;
   height: 100%;
 }
 
 .sedeSeleccion {
-  display:flex;
+  display: flex;
   flex-direction: column;
   row-gap: 20px;
   height: 100%;
-  width: calc(100% - 440px);
+  width: fit-content;
   padding-top: 20px;
+  justify-content: center;
 }
 
-.contSedeNombre{
+.contSedeNombre {
   display: flex;
   max-height: 10vh;
   column-gap: 10px;
@@ -369,12 +379,12 @@ body {
   border-radius: 4px;
 }
 
-.contSedeNombre img{
+.contSedeNombre img {
   object-fit: contain;
   height: 60px;
 }
 
-.contSede{
+.contSede {
   display: flex;
   flex-direction: column;
   font-size: 1.1rem;
@@ -389,7 +399,7 @@ body {
   background-size: cover;
 }
 
-.contIzqClases{
+.contIzqClases {
   justify-self: left;
   display: flex;
   flex-direction: column;
@@ -398,12 +408,12 @@ body {
   margin-right: 10vh;
 }
 
-.contIzqClases h3{
+.contIzqClases h3 {
   text-align: center;
   font-size: 1.3rem;
 }
 
-.contIzqClases p{
+.contIzqClases p {
   text-align: center;
   font-size: 1.3rem;
 }
@@ -429,14 +439,15 @@ body {
   color: white;
 }
 
-.contDerClases{
+.contDerClases {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: fit-content;
+  border: red solid 1px;
 }
 
-.contDerClases img{
+.contDerClases img {
   object-fit: contain;
   width: 100%;
   height: 64vh;
@@ -459,8 +470,8 @@ body {
   height: 64vh;
 }
 
-.contWpt{
-  width:47vw;
+.contWpt {
+  width: 47vw;
 }
 
 .iframe {
@@ -474,7 +485,7 @@ body {
   height: 100%;
   position: absolute;
   width: 100%;
-  }
+}
 
 /*--------------------------------------- FIN ESTILOS WPT--------------------------------------- */
 
@@ -488,7 +499,7 @@ body {
   height: 54vh;
 }
 
-.contForm{
+.contForm {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -499,19 +510,19 @@ body {
   height: 100%;
 }
 
-.contLblInpt{
+.contLblInpt {
   display: flex;
   font-size: 1.1rem;
   justify-content: space-between;
 }
 
-.contLblInpt textarea{
+.contLblInpt textarea {
   font-size: 1.1rem;
   font-family: 'Montserrat';
   width: 100%;
 }
 
-.lbl{
+.lbl {
   margin-bottom: 2px;
   font-weight: 500;
 }
@@ -522,7 +533,7 @@ body {
   width: 60%
 }
 
-.contCheck{
+.contCheck {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -530,7 +541,7 @@ body {
   column-gap: 10px;
 }
 
-#btn{
+#btn {
   background-color: #0084ff;
   color: white;
   width: 100%;
@@ -541,13 +552,13 @@ body {
   font-family: 'Montserrat';
   border: 0;
   border-radius: 4px
-
 }
 
 #btn:hover {
   background-color: rgb(119, 187, 255);
   color: white;
 }
+
 /*--------------------------------------- FIN ESTILOS CONTACTO --------------------------------------- */
 
 /*--------------------------------------- INICIO ESTILOS SHOP-MAIN --------------------------------------- */
@@ -637,16 +648,16 @@ body {
   margin-bottom: 10px
 }
 
-.contenedor-marca{
-	position: relative;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	padding: 20px;
-	scroll-margin-top: 15vh;
-	row-gap: 10px;
+.contenedor-marca {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  scroll-margin-top: 15vh;
+  row-gap: 10px;
 }
 
 .fotoLogo {
@@ -673,6 +684,8 @@ body {
   flex-wrap: wrap;
   transform: scale(1);
   transition: transform 1s;
+  height: 18rem;
+  margin-bottom: 1.7rem
   /* TRANSICIÒN */
 }
 
@@ -680,6 +693,8 @@ body {
   transform: scale(1.1);
   transition: transform 1s;
   box-shadow: 2px 2px 4px 1.5px rgb(204, 204, 204);
+  height: 19.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .comprarItem {
@@ -689,15 +704,17 @@ body {
 .itemShop:hover .comprarItem {
   display: block;
 }
+
 .fotoShop img {
   width: 14rem;
   height: 14rem;
 }
 
 .itemNombre p {
-    font-size: 1rem;
-    text-align: center;
+  font-size: 1rem;
+  text-align: center;
 }
+
 .precioShop {
   background-color: white;
   font-weight: bold;
@@ -722,6 +739,7 @@ body {
   background-color: black;
   border: black;
 }
+
 /*--------------------------------------- FIN ESTILOS SHOPLIST --------------------------------------- */
 
 /*--------------------------------------- FIN ESTILOS SHOP-MAIN --------------------------------------- */
@@ -731,7 +749,7 @@ body {
   display: flex;
   background-color: #262626;
   background-size: cover;
-  height:10vh;
+  height: 10vh;
   color: white;
 }
 
@@ -761,7 +779,7 @@ body {
   justify-content: center;
   height: 100%;
   align-items: center;
-  font-size: 0.8rem; 
+  font-size: 0.8rem;
 }
 
 .contLogofooter {
@@ -772,47 +790,53 @@ body {
   column-gap: 10px;
 }
 
-.contLogofooter img{
+.contLogofooter img {
   width: 5vh;
 }
+
 /*--------------------------------------- FIN ESTILOS FOOTER --------------------------------------- */
 
 /*--------------------------------------- INICIO ANIMACIONES --------------------------------------- */
-@keyframes toRight{
-    0% {
-        left: 0;
-    }
-    100% {
-        left: 100%;
-    }
+@keyframes toRight {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 100%;
+  }
 }
 
-@keyframes toLeft{
-    0% {
-        left: 0;
-    }
-    100% {
-        left: -100%;
-    }
+@keyframes toLeft {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -100%;
+  }
 }
 
-@keyframes comeRight{
-    0% {
-        left: 100%;
-    }
-    100% {
-        left: 0;
-    }
+@keyframes comeRight {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: 0;
+  }
 }
 
-@keyframes comeLeft{
-    0% {
-        left: -100;
-    }
-    100% {
-        left: 0%;
-    }
+@keyframes comeLeft {
+  0% {
+    left: -100;
+  }
+
+  100% {
+    left: 0%;
+  }
 }
+
 /*--------------------------------------- FIN ANIMACIONES --------------------------------------- */
 
 /*--------------------------------------- MEDIA QUERIES --------------------------------------- */
@@ -829,36 +853,40 @@ De 992px a 1199px son pantallas de escritorio normales.
   .menuMarca li {
     font-size: 1rem;
   }
+
   .shopList h2 {
     font-size: 1.8rem;
   }
+
   .fotoLogo {
     height: 6rem;
   }
-  h1{
+
+  h1 {
     font-size: 1.6rem;
   }
-  .contTexto p{
+
+  .contTexto p {
     font-size: 1rem;
   }
 
-  .section-header h2{
+  .section-header h2 {
     font-size: 1.4rem;
   }
 
-  .section-header h3{
+  .section-header h3 {
     font-size: 1.2rem;
   }
 
-  .contIzqClases{
+  .contIzqClases {
     width: 40vw;
   }
 
-  .contIzqClases p{
+  .contIzqClases p {
     font-size: 1rem;
   }
 
-  #botonClases{
+  #botonClases {
     font-size: 1rem;
   }
 
@@ -870,8 +898,17 @@ De 992px a 1199px son pantallas de escritorio normales.
     font-size: 1rem;
   }
 
-  .contSedeNombre{
-    width: 35vw
+  .contSedeNombre {
+    width: 35vw;
+  }
+
+  /* -MATI- */
+  .brand img {
+    height: 7vh;
+  }
+
+  .contIzq{
+    row-gap: 0.5rem;
   }
 
 }
@@ -912,74 +949,80 @@ De 992px a 1199px son pantallas de escritorio normales.
     height: 5rem;
   }
 
-  h1{
+  .section-header-h1 {
+    height: 3.9rem;
+  }
+
+  h1 {
     font-size: 1.3rem;
   }
-  .contTexto p{
+
+  .contTexto p {
     font-size: 1rem;
   }
 
-  .section-column{
+  .section-column {
     height: 100%
   }
 
-  .section-header{
+  .section-header {
     height: 100%;
   }
-  .section-header h2{
+
+  .section-header h2 {
     font-size: 1.2rem;
   }
 
-  .section-header h3{
+  .section-header h3 {
     font-size: 1rem;
   }
 
-  .contenidoPpal{
+  .contenidoPpal {
     flex-direction: column;
     height: auto;
     flex-wrap: nowrap;
-    row-gap:10px;
+    row-gap: 10px;
   }
 
-  .contIzq{
+  .contIzq {
     width: 100%;
     padding: 0;
   }
 
-  .contDer img{
+  .contDer img {
     width: 100%;
     height: 100%;
   }
 
-  .map{
+  .map {
     width: 100%;
     height: 300px
   }
 
-  .sedeSeleccion{
+  .sedeSeleccion {
     width: 100%;
   }
 
-  .contSedeNombre{
+  .contSedeNombre {
     width: 50%;
   }
 
-  .contIzqClases{
+  .contIzqClases {
     width: 100%;
     font-size: 1rem;
     row-gap: 10px;
   }
 
-  .contIzqClases h3{
+  .contIzqClases h3 {
     font-size: 1rem;
   }
-  
-  .contDerClases img{
+
+  .contDerClases img {
     width: 100%;
     height: 100%;
   }
 
-  #botonClases{
+  #botonClases {
     margin-top: 0;
     font-size: 1rem;
   }
@@ -988,62 +1031,65 @@ De 992px a 1199px son pantallas de escritorio normales.
     margin-top: 10px;
   }
 
-  .wptPpal{
+  .wptPpal {
     flex-direction: column;
     row-gap: 10px;
     height: 100%;
     margin-bottom: 10px;
   }
 
-  .contWpt{
+  .contWpt {
     width: 100%;
   }
 
-  #contacto{
-    height: 100%;
-  }
-  
-  #contacto .contenidoPpal{
+  #contacto {
     height: 100%;
   }
 
-  .contForm{
-    width:40%;
+  #contacto .contenidoPpal {
+    height: 100%;
   }
 
- .carousel-container{
-  height: 85vh;
- }
+  .carousel-container {
+    height: calc((100vw-40px) * 75%);
+  }
+
+  /* -MATI- */
+  .brand img {
+    height: 4.5vh;
+  }
+
+  .main-header {
+    height: 10vh;
+  }
+
+  .formWrapper {
+    width: 55%;
+  }
 
 }
 
 @media screen and (max-width: 768px) {
-  .main-header{
+  .main-header {
     height: 7rem;
   }
-  
-  .headerWrapper{
+
+  .headerWrapper {
     flex-direction: column;
     height: 100%;
     margin: 0 20px;
     padding: 10px 0;
   }
 
-  .nav-bar{
+  .nav-bar {
     height: 2rem;
   }
 
-  .brand img{
-    object-fit: contain;
-    height: 3rem;
-    width: auto;
-  }
-
-  .section-row{
+  .section-row {
     scroll-margin-top: 7rem;
   }
 
-  .section-column{
+  .section-column {
     scroll-margin-top: 7rem;
   }
 
@@ -1051,71 +1097,79 @@ De 992px a 1199px son pantallas de escritorio normales.
     width: 24%;
   }
 
-  .shopList{
+  .shopList {
     scroll-margin-top: 7rem;
     width: 76%;
   }
 
-  .shopList h2{
+  .shopList h2 {
     scroll-margin-top: 7rem;
   }
 
-  .contenedor-marca{
+  .contenedor-marca {
     scroll-margin-top: 7rem;
   }
 
-  .contForm{
-    width:70%;
+  .contForm {
+    width: 70%;
     align-self: center;
+   backdrop-filter: contrast(30%);
+    border-radius: 20px;
+    padding: 10px;
   }
 
-  #main-footer{
+  #main-footer {
     height: 100%;
   }
 
-  .footerWrapper{
+  .footerWrapper {
     flex-direction: column;
     padding: 10px 0;
     row-gap: 10px;
   }
 
-  .contPpoint img{
+  .contPpoint img {
     height: 40px;
   }
 
-  .contPfooter  {
+  .contPfooter {
     height: auto;
     padding: 0;
   }
 
-  .contLogofooter{
-    height:auto;
+  .contLogofooter {
+    height: auto;
   }
 
   .contLogofooter img {
     width: 3rem;
   }
 
-  .contSedeNombre img{
+  .contSedeNombre img {
     width: 40px;
   }
 
-  .contSede{
+  .contSede {
     font-size: 0.9rem;
   }
 
+  /* -MATI- */
+  .contForm {
+    width: 90%;
+    margin-left: 0.5rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
-  .nav a{
+  .nav a {
     font-size: 0.7rem;
   }
-  
+
   .aside {
     width: 30vw;
   }
 
-  .shopList{
+  .shopList {
     width: 70vw
   }
 
@@ -1126,19 +1180,46 @@ De 992px a 1199px son pantallas de escritorio normales.
   .shopList h2 {
     font-size: 1.5rem;
   }
+
   .menuMarca li {
     font-size: 1.1rem;
   }
 
-  h1{
+  .section-header-h1 {
+    height: 3rem;
+  }
+
+  h1 {
     font-size: 1rem;
   }
 
-  .contTexto p{
+  .contTexto p {
     font-size: 0.8rem;
   }
-  .contSedeNombre{
+
+  .contSedeNombre {
     width: 60vw
   }
+
+  /* -MATI- */
+  .menuMarca li {
+    font-size: 0.9rem;
+  }
 }
-/*--------------------------------------- FIN MEDIAQ QUERIES --------------------------------------- */
+
+
+/* -MATI- */
+@media screen and (max-width: 420px) {
+  .nav ul li {
+    padding: 0;
+  }
+  .aside {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .itemShop {
+    width: 15rem;
+  }
+}
+/*--------------------------------------- FIN MEDIA QUERIES --------------------------------------- */
