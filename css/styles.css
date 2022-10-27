@@ -131,7 +131,6 @@ body {
   height: 15vh;
   margin-top: 2vh;
   font-size: 1.3rem;
-  border: red solid 1px
 }
 
 .section-header h2 {
@@ -150,7 +149,6 @@ body {
   height: 64vh;
   width: 100%;
   margin-bottom: 2vh;
-  border: red solid 1px
 }
 
 /*--------------------------------------- INICIO ESTILOS DE CAROUSEL --------------------------------------- */
@@ -187,7 +185,7 @@ body {
 
 .carousel img {
   width: 100%;
-  fill: cover;
+  object-fit: contain;
 }
 
 /* -- ESTILOS DE ELEMENTOS ESTÁTICOS -- */
@@ -279,7 +277,6 @@ body {
   color: white;
   text-shadow: 1px 1px black;
   text-align: center;
-  border: red solid 1px;
 }
 
 .text-container p:nth-child(1) {
@@ -444,7 +441,6 @@ body {
   flex-direction: column;
   justify-content: center;
   width: fit-content;
-  border: red solid 1px;
 }
 
 .contDerClases img {
@@ -1050,11 +1046,6 @@ De 992px a 1199px son pantallas de escritorio normales.
     height: 100%;
   }
 
-  .carousel-container {
-    height: calc((100vw-40px) * 75%);
-  }
-
-  /* -MATI- */
   .brand img {
     height: 4.5vh;
   }
@@ -1153,10 +1144,13 @@ De 992px a 1199px son pantallas de escritorio normales.
     font-size: 0.9rem;
   }
 
-  /* -MATI- */
   .contForm {
     width: 90%;
     margin-left: 0.5rem;
+  }
+
+  .carousel-container{
+    height: 28rem;
   }
 }
 
@@ -1198,13 +1192,14 @@ De 992px a 1199px son pantallas de escritorio normales.
   }
 
   .contSedeNombre {
-    width: 60vw
+    width: 100%
   }
 
-  /* -MATI- */
   .menuMarca li {
     font-size: 0.9rem;
   }
+
+
 }
 
 
