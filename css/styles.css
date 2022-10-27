@@ -165,7 +165,6 @@ body {
   width: 100%;
   height: 85vh;
   margin: 0 20px;
-  border: yellow solid 1px;
 }
 
 .carousel {
@@ -179,7 +178,7 @@ body {
 
 .carousel-screen {
   position: absolute;
-  height: 85vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -197,7 +196,7 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  width: 50px;
+  width: 10vw;
   cursor: pointer;
 }
 
@@ -213,7 +212,7 @@ body {
   top: 0;
   right: 0;
   height: 100%;
-  width: 50px;
+  width: 10vw;
   cursor: pointer;
 }
 
@@ -275,8 +274,14 @@ body {
   left: 0;
   width: 100%;
   color: white;
-  text-shadow: 1px 1px black;
   text-align: center;
+}
+
+.text-container p{
+  backdrop-filter: contrast(20%);
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .text-container p:nth-child(1) {
@@ -765,7 +770,7 @@ body {
 .contPpoint img {
   object-fit: contain;
   width: auto;
-  height: 7vh;
+  height: 5vh;
 }
 
 .contPfooter {
@@ -898,7 +903,6 @@ De 992px a 1199px son pantallas de escritorio normales.
     width: 35vw;
   }
 
-  /* -MATI- */
   .brand img {
     height: 7vh;
   }
@@ -1047,7 +1051,7 @@ De 992px a 1199px son pantallas de escritorio normales.
   }
 
   .brand img {
-    height: 4.5vh;
+    height: 6vh;
   }
 
   .main-header {
@@ -1150,7 +1154,15 @@ De 992px a 1199px son pantallas de escritorio normales.
   }
 
   .carousel-container{
-    height: 28rem;
+    height: calc((100vw - 40px)*0.75)
+  }
+
+  .left-arrow {
+    width: 100px;
+  }
+
+  .right-arrow {
+    width: 100px;
   }
 }
 
@@ -1199,11 +1211,21 @@ De 992px a 1199px son pantallas de escritorio normales.
     font-size: 0.9rem;
   }
 
+  .text-container p:nth-child(1) {
+    margin: 10px 50px;
+    font-size: 1.2rem;
+  }
+  
+  .text-container p:nth-child(2) {
+    margin: 10px 50px;
+    font-size: 1.2rem;
+  }
 
+  .circle-container {
+    align-items: center;
+  }
 }
 
-
-/* -MATI- */
 @media screen and (max-width: 420px) {
   .nav ul li {
     padding: 0;
@@ -1216,5 +1238,25 @@ De 992px a 1199px son pantallas de escritorio normales.
   .itemShop {
     width: 15rem;
   }
+  .text-container{
+    row-gap: 0.2rem;
+  }
+
+  .text-container p{
+    padding: 3px;
+    border-radius: 3px
+  }
+
+  .text-container p:nth-child(1) {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .text-container p:nth-child(2) {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+  }
+
+
 }
 /*--------------------------------------- FIN MEDIA QUERIES --------------------------------------- */
